@@ -1,3 +1,19 @@
+> **STATUS: ARCHIVED — research programme closed, not proceeding (15 Sep 2026).**
+>
+> This harness was built during a one-day scoping sprint for a proposed research
+> programme on reducing UK vehicle emissions via traffic flow optimisation. The
+> programme was closed at the scoping gate: the core hypothesis is already settled
+> in the literature, and there is no open UK vehicle trajectory dataset or public
+> signal timing plan data to support a credible empirical study.
+>
+> **Important caveat on the results:** the emissions reductions reported by the
+> experiments here are the interaction of two models written for this repo (a
+> simplified COPERT-style polynomial driven by our own IDM implementation). They
+> are NOT validated against real-world measurements and should not be cited as
+> evidence about actual traffic emissions.
+>
+> The code is sound and tested (41 passing tests) and is retained for reference.
+
 # Reducing UK vehicle emissions by optimising traffic flow
 
 A microscopic traffic simulation harness for researching how smoothing
