@@ -1,0 +1,26 @@
+# Motorway-style corridor with an uncontrolled on-ramp merge, baseline:
+# ramp traffic merges as soon as a gap is available, with no metering.
+name: ramp_baseline
+topology: corridor
+seed: 0
+dt: 0.5
+duration: 1800
+
+demand:
+  mainline_veh_per_hour: 1500
+
+idm:
+  v0_kmh: 90
+  T: 1.3
+  a_max: 1.2
+  b: 2.0
+  delta: 4.0
+  s0: 2.0
+
+corridor:
+  length: 3000
+  base_speed_limit_kmh: 90
+  on_ramp:
+    merge_position: 1200
+    demand_veh_per_hour: 500
+    metering: false

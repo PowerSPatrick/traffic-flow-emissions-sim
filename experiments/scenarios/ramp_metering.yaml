@@ -1,0 +1,29 @@
+# Same motorway corridor as ramp_baseline.yaml, but with ramp metering:
+# a signal on the ramp caps the release rate onto the mainline, smoothing
+# the merge instead of letting bursts of ramp traffic force mainline
+# braking waves.
+name: ramp_metering
+topology: corridor
+seed: 0
+dt: 0.5
+duration: 1800
+
+demand:
+  mainline_veh_per_hour: 1500
+
+idm:
+  v0_kmh: 90
+  T: 1.3
+  a_max: 1.2
+  b: 2.0
+  delta: 4.0
+  s0: 2.0
+
+corridor:
+  length: 3000
+  base_speed_limit_kmh: 90
+  on_ramp:
+    merge_position: 1200
+    demand_veh_per_hour: 500
+    metering: true
+    metering_rate_veh_per_hour: 350

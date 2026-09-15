@@ -1,0 +1,29 @@
+# Same corridor and signal plan as corridor_baseline.yaml, but with signal
+# offsets coordinated into a "green wave" for a platoon travelling at the
+# design progression speed -- the traffic-flow-smoothing intervention.
+name: corridor_green_wave
+topology: corridor
+seed: 0
+dt: 0.5
+duration: 1800
+
+demand:
+  mainline_veh_per_hour: 1000
+
+idm:
+  v0_kmh: 50
+  T: 1.5
+  a_max: 1.4
+  b: 2.0
+  delta: 4.0
+  s0: 2.0
+
+corridor:
+  length: 1800
+  base_speed_limit_kmh: 50
+  green_wave: true
+  progression_speed_kmh: 50
+  signals:
+    - {position: 500, cycle_time: 60, green_time: 25}
+    - {position: 1100, cycle_time: 60, green_time: 25}
+    - {position: 1600, cycle_time: 60, green_time: 25}
